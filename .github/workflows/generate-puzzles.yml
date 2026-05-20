@@ -2,9 +2,9 @@ name: Auto-generate daily puzzles
 
 on:
   schedule:
-    # Every Monday at 6am UTC — generates next 30 days, skips existing ones
+    # Every day at 6am UTC — generates next 30 days, skips existing ones
     # Vercel auto-deploys on every push to main, so puzzles go live instantly
-    - cron: '0 6 * * 1'
+    - cron: '0 6 * * *'
   workflow_dispatch:  # Manual trigger: GitHub → Actions → Run workflow
 
 jobs:
